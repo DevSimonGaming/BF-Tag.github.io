@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitstelle</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="header">
+        <img src="Images/wappen.png" alt="wappen_schoenkirchen" height="50" class="image">
+        <h1 class="titel">JF Leitstelle</h1>
+    </div>
+
+    <div id="main">
+        <div id="formular">
+            <div id="felder">
+                <select name="stichwort" id="stichwort_select" class="select">
+                    <!-- Stichwörter einfügen! (ToDo) -->
+                    <option value="1">Brand 3</option>
+                    <option value="2">TH 2</option>
+                </select>
+                <textarea name="adresse" id="adresse" class="textbox">Palhblöken 6-8, 24232 Schönkirchen</textarea>
+                <textarea name="meldender" id="meldender" class="textbox">Max Mustermann</textarea>
+                <textarea name="info" id="info" class="textbox">Starke Rauchentwicklung</textarea>
+                <textarea name="freitext" id="freitext" class="textbox">...</textarea>
+            </div>
+
+            <div id="labels">
+                <p id="stichwort_label" class="label">Stichwort</p>
+                <p id="adresse_label" class="label">Adresse</p>
+                <p id="meldender_label" class="label">Meldender</p>
+                <p id="info_labal" class="label">Info</p>
+                <p id="freitext_label" class="label">Freitext</p>
+            </div>
+
+            <div id="fahrzeuge" class="fahrzeuge_liste">
+                <!-- Fahrzeuge & Schalter werden von main.js eingefügt (INFO, API) -->
+            </div>
+
+            <button id="einsatz_senden" class="button">senden</button>
+        </div>
+
+        <div id="einsaetze" class="container">
+            <!-- Aktuell laufende Einsätze werden von main.js eingefügt (INFO, API) -->
+        </div>
+
+        <div id="funkstatus" class="container">
+            <!-- Funkstatus Hystorie wird von main.js eingefügt (INFO, API) -->
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <p class="copyright">BF-Tag System Schönkirchen 2025</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

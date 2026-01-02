@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Fahrzeugliste</title>
+</head>
+<body>
+    <h1>Fahrzeuge</h1>
+    <ul id="fahrzeugListe"></ul>
+
+    <script type="module">
+        import { getFahrzeugNamen } from './Fahrzeuge.js';
+
+        async function zeigeFahrzeuge() {
+            const namen = await getFahrzeugNamen();
+            const liste = document.getElementById('fahrzeugListe');
+
+            // Leere Liste vorher
+            liste.innerHTML = '';
+
+            // Liste der Fahrzeugnamen erstellen
+            namen.forEach(name => {
+                const li = document.createElement('li');
+                li.textContent = name;
+                liste.appendChild(li);
+            });
+        }
+
+        // Direkt beim Laden aufrufen
+        zeigeFahrzeuge();
+    </script>
+</body>
+</html>
