@@ -2,7 +2,7 @@
 
 // Funktion, um Fahrzeugnamen von der API zu holen
 async function getFahrzeugNamen() {
-    const apiUrl = "http://localhost:3000/api/fahrzeuge"; // API-Endpunkt
+    const apiUrl = "https://bradtke.de/jf/api/get_fahrzeug_schluessel_liste.php"; // API-Endpunkt
 
     try {
         const response = await fetch(apiUrl);
